@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCharacterCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCharacterCreator.Designer.cs">
+      <DependentUpon>frmCharacterCreator.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCharacterStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCharacterCreator.resx">
+      <DependentUpon>frmCharacterCreator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCharacterStats.resx">
       <DependentUpon>frmCharacterStats.cs</DependentUpon>
     </EmbeddedResource>

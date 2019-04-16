@@ -30,27 +30,27 @@
         {
             this.cboCharacterName = new System.Windows.Forms.ComboBox();
             this.btnNewCharacter = new System.Windows.Forms.Button();
-            this.btnEditCharacter = new System.Windows.Forms.Button();
+            this.btnSaveCharacter = new System.Windows.Forms.Button();
             this.btnDeleteCharacter = new System.Windows.Forms.Button();
             this.grpAbilities = new System.Windows.Forms.GroupBox();
-            this.grpAbilityStrength = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.grpAbilityDexterity = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.grpAbilityConstitution = new System.Windows.Forms.GroupBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.grpAbilityIntelligence = new System.Windows.Forms.GroupBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.grpAbilityWisdom = new System.Windows.Forms.GroupBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.grpAbilityCharisma = new System.Windows.Forms.GroupBox();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.grpAbilityWisdom = new System.Windows.Forms.GroupBox();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.grpAbilityIntelligence = new System.Windows.Forms.GroupBox();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.grpAbilityConstitution = new System.Windows.Forms.GroupBox();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.grpAbilityDexterity = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.grpAbilityStrength = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.lblInspiration = new System.Windows.Forms.Label();
             this.grpInspration = new System.Windows.Forms.GroupBox();
@@ -58,18 +58,18 @@
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.lblProfBonus = new System.Windows.Forms.Label();
             this.grpAbilities.SuspendLayout();
-            this.grpAbilityStrength.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.grpAbilityDexterity.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.grpAbilityConstitution.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            this.grpAbilityIntelligence.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            this.grpAbilityWisdom.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.grpAbilityCharisma.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            this.grpAbilityWisdom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            this.grpAbilityIntelligence.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.grpAbilityConstitution.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.grpAbilityDexterity.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.grpAbilityStrength.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.grpInspration.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -94,19 +94,20 @@
             this.btnNewCharacter.TabIndex = 1;
             this.btnNewCharacter.Text = "New Character";
             this.btnNewCharacter.UseVisualStyleBackColor = true;
+            this.btnNewCharacter.Click += new System.EventHandler(this.btnNewCharacter_Click);
             // 
-            // btnEditCharacter
+            // btnSaveCharacter
             // 
-            this.btnEditCharacter.Location = new System.Drawing.Point(105, 12);
-            this.btnEditCharacter.Name = "btnEditCharacter";
-            this.btnEditCharacter.Size = new System.Drawing.Size(87, 23);
-            this.btnEditCharacter.TabIndex = 3;
-            this.btnEditCharacter.Text = "Edit Character";
-            this.btnEditCharacter.UseVisualStyleBackColor = true;
+            this.btnSaveCharacter.Location = new System.Drawing.Point(105, 12);
+            this.btnSaveCharacter.Name = "btnSaveCharacter";
+            this.btnSaveCharacter.Size = new System.Drawing.Size(90, 23);
+            this.btnSaveCharacter.TabIndex = 3;
+            this.btnSaveCharacter.Text = "Save Character";
+            this.btnSaveCharacter.UseVisualStyleBackColor = true;
             // 
             // btnDeleteCharacter
             // 
-            this.btnDeleteCharacter.Location = new System.Drawing.Point(198, 12);
+            this.btnDeleteCharacter.Location = new System.Drawing.Point(201, 12);
             this.btnDeleteCharacter.Name = "btnDeleteCharacter";
             this.btnDeleteCharacter.Size = new System.Drawing.Size(97, 23);
             this.btnDeleteCharacter.TabIndex = 4;
@@ -128,145 +129,40 @@
             this.grpAbilities.TabIndex = 7;
             this.grpAbilities.TabStop = false;
             // 
-            // grpAbilityStrength
+            // grpAbilityCharisma
             // 
-            this.grpAbilityStrength.Controls.Add(this.numericUpDown1);
-            this.grpAbilityStrength.Controls.Add(this.textBox1);
-            this.grpAbilityStrength.Location = new System.Drawing.Point(6, 19);
-            this.grpAbilityStrength.Name = "grpAbilityStrength";
-            this.grpAbilityStrength.Size = new System.Drawing.Size(81, 81);
-            this.grpAbilityStrength.TabIndex = 8;
-            this.grpAbilityStrength.TabStop = false;
-            this.grpAbilityStrength.Text = "Strength";
+            this.grpAbilityCharisma.Controls.Add(this.numericUpDown6);
+            this.grpAbilityCharisma.Controls.Add(this.textBox6);
+            this.grpAbilityCharisma.Location = new System.Drawing.Point(6, 454);
+            this.grpAbilityCharisma.Name = "grpAbilityCharisma";
+            this.grpAbilityCharisma.Size = new System.Drawing.Size(81, 81);
+            this.grpAbilityCharisma.TabIndex = 11;
+            this.grpAbilityCharisma.TabStop = false;
+            this.grpAbilityCharisma.Text = "Charisma";
             // 
-            // numericUpDown1
+            // numericUpDown6
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(16, 55);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDown6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown6.Location = new System.Drawing.Point(16, 55);
+            this.numericUpDown6.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 22);
-            this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(46, 22);
+            this.numericUpDown6.TabIndex = 8;
             // 
-            // textBox1
+            // textBox6
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.MaxLength = 2;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(69, 31);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // grpAbilityDexterity
-            // 
-            this.grpAbilityDexterity.Controls.Add(this.numericUpDown2);
-            this.grpAbilityDexterity.Controls.Add(this.textBox2);
-            this.grpAbilityDexterity.Location = new System.Drawing.Point(6, 106);
-            this.grpAbilityDexterity.Name = "grpAbilityDexterity";
-            this.grpAbilityDexterity.Size = new System.Drawing.Size(81, 81);
-            this.grpAbilityDexterity.TabIndex = 10;
-            this.grpAbilityDexterity.TabStop = false;
-            this.grpAbilityDexterity.Text = "Dexterity";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(16, 55);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(46, 22);
-            this.numericUpDown2.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(6, 19);
-            this.textBox2.MaxLength = 2;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(69, 31);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // grpAbilityConstitution
-            // 
-            this.grpAbilityConstitution.Controls.Add(this.numericUpDown3);
-            this.grpAbilityConstitution.Controls.Add(this.textBox3);
-            this.grpAbilityConstitution.Location = new System.Drawing.Point(6, 193);
-            this.grpAbilityConstitution.Name = "grpAbilityConstitution";
-            this.grpAbilityConstitution.Size = new System.Drawing.Size(81, 81);
-            this.grpAbilityConstitution.TabIndex = 9;
-            this.grpAbilityConstitution.TabStop = false;
-            this.grpAbilityConstitution.Text = "Constitution";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(16, 55);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(46, 22);
-            this.numericUpDown3.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(6, 19);
-            this.textBox3.MaxLength = 2;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(69, 31);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // grpAbilityIntelligence
-            // 
-            this.grpAbilityIntelligence.Controls.Add(this.numericUpDown4);
-            this.grpAbilityIntelligence.Controls.Add(this.textBox4);
-            this.grpAbilityIntelligence.Location = new System.Drawing.Point(6, 280);
-            this.grpAbilityIntelligence.Name = "grpAbilityIntelligence";
-            this.grpAbilityIntelligence.Size = new System.Drawing.Size(81, 81);
-            this.grpAbilityIntelligence.TabIndex = 10;
-            this.grpAbilityIntelligence.TabStop = false;
-            this.grpAbilityIntelligence.Text = "Intelligence";
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(16, 55);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(46, 22);
-            this.numericUpDown4.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(6, 19);
-            this.textBox4.MaxLength = 2;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(69, 31);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox6.Location = new System.Drawing.Point(6, 19);
+            this.textBox6.MaxLength = 2;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(69, 31);
+            this.textBox6.TabIndex = 9;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // grpAbilityWisdom
             // 
@@ -303,40 +199,145 @@
             this.textBox5.TabIndex = 9;
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // grpAbilityCharisma
+            // grpAbilityIntelligence
             // 
-            this.grpAbilityCharisma.Controls.Add(this.numericUpDown6);
-            this.grpAbilityCharisma.Controls.Add(this.textBox6);
-            this.grpAbilityCharisma.Location = new System.Drawing.Point(6, 454);
-            this.grpAbilityCharisma.Name = "grpAbilityCharisma";
-            this.grpAbilityCharisma.Size = new System.Drawing.Size(81, 81);
-            this.grpAbilityCharisma.TabIndex = 11;
-            this.grpAbilityCharisma.TabStop = false;
-            this.grpAbilityCharisma.Text = "Charisma";
+            this.grpAbilityIntelligence.Controls.Add(this.numericUpDown4);
+            this.grpAbilityIntelligence.Controls.Add(this.textBox4);
+            this.grpAbilityIntelligence.Location = new System.Drawing.Point(6, 280);
+            this.grpAbilityIntelligence.Name = "grpAbilityIntelligence";
+            this.grpAbilityIntelligence.Size = new System.Drawing.Size(81, 81);
+            this.grpAbilityIntelligence.TabIndex = 10;
+            this.grpAbilityIntelligence.TabStop = false;
+            this.grpAbilityIntelligence.Text = "Intelligence";
             // 
-            // numericUpDown6
+            // numericUpDown4
             // 
-            this.numericUpDown6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown6.Location = new System.Drawing.Point(16, 55);
-            this.numericUpDown6.Maximum = new decimal(new int[] {
+            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown4.Location = new System.Drawing.Point(16, 55);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
             20,
             0,
             0,
             0});
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(46, 22);
-            this.numericUpDown6.TabIndex = 8;
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(46, 22);
+            this.numericUpDown4.TabIndex = 8;
             // 
-            // textBox6
+            // textBox4
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(6, 19);
-            this.textBox6.MaxLength = 2;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(69, 31);
-            this.textBox6.TabIndex = 9;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(6, 19);
+            this.textBox4.MaxLength = 2;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(69, 31);
+            this.textBox4.TabIndex = 9;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // grpAbilityConstitution
+            // 
+            this.grpAbilityConstitution.Controls.Add(this.numericUpDown3);
+            this.grpAbilityConstitution.Controls.Add(this.textBox3);
+            this.grpAbilityConstitution.Location = new System.Drawing.Point(6, 193);
+            this.grpAbilityConstitution.Name = "grpAbilityConstitution";
+            this.grpAbilityConstitution.Size = new System.Drawing.Size(81, 81);
+            this.grpAbilityConstitution.TabIndex = 9;
+            this.grpAbilityConstitution.TabStop = false;
+            this.grpAbilityConstitution.Text = "Constitution";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown3.Location = new System.Drawing.Point(16, 55);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(46, 22);
+            this.numericUpDown3.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(6, 19);
+            this.textBox3.MaxLength = 2;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(69, 31);
+            this.textBox3.TabIndex = 9;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // grpAbilityDexterity
+            // 
+            this.grpAbilityDexterity.Controls.Add(this.numericUpDown2);
+            this.grpAbilityDexterity.Controls.Add(this.textBox2);
+            this.grpAbilityDexterity.Location = new System.Drawing.Point(6, 106);
+            this.grpAbilityDexterity.Name = "grpAbilityDexterity";
+            this.grpAbilityDexterity.Size = new System.Drawing.Size(81, 81);
+            this.grpAbilityDexterity.TabIndex = 10;
+            this.grpAbilityDexterity.TabStop = false;
+            this.grpAbilityDexterity.Text = "Dexterity";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(16, 55);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(46, 22);
+            this.numericUpDown2.TabIndex = 8;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(6, 19);
+            this.textBox2.MaxLength = 2;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(69, 31);
+            this.textBox2.TabIndex = 9;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // grpAbilityStrength
+            // 
+            this.grpAbilityStrength.Controls.Add(this.numericUpDown1);
+            this.grpAbilityStrength.Controls.Add(this.textBox1);
+            this.grpAbilityStrength.Location = new System.Drawing.Point(6, 19);
+            this.grpAbilityStrength.Name = "grpAbilityStrength";
+            this.grpAbilityStrength.Size = new System.Drawing.Size(81, 81);
+            this.grpAbilityStrength.TabIndex = 8;
+            this.grpAbilityStrength.TabStop = false;
+            this.grpAbilityStrength.Text = "Strength";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(16, 55);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(46, 22);
+            this.numericUpDown1.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(6, 19);
+            this.textBox1.MaxLength = 2;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(69, 31);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox7
             // 
@@ -406,30 +407,30 @@
             this.Controls.Add(this.grpInspration);
             this.Controls.Add(this.grpAbilities);
             this.Controls.Add(this.btnDeleteCharacter);
-            this.Controls.Add(this.btnEditCharacter);
+            this.Controls.Add(this.btnSaveCharacter);
             this.Controls.Add(this.btnNewCharacter);
             this.Controls.Add(this.cboCharacterName);
             this.Name = "frmCharacterStats";
             this.Text = "Form1";
             this.grpAbilities.ResumeLayout(false);
-            this.grpAbilityStrength.ResumeLayout(false);
-            this.grpAbilityStrength.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.grpAbilityDexterity.ResumeLayout(false);
-            this.grpAbilityDexterity.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            this.grpAbilityConstitution.ResumeLayout(false);
-            this.grpAbilityConstitution.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            this.grpAbilityIntelligence.ResumeLayout(false);
-            this.grpAbilityIntelligence.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            this.grpAbilityWisdom.ResumeLayout(false);
-            this.grpAbilityWisdom.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.grpAbilityCharisma.ResumeLayout(false);
             this.grpAbilityCharisma.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            this.grpAbilityWisdom.ResumeLayout(false);
+            this.grpAbilityWisdom.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            this.grpAbilityIntelligence.ResumeLayout(false);
+            this.grpAbilityIntelligence.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.grpAbilityConstitution.ResumeLayout(false);
+            this.grpAbilityConstitution.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.grpAbilityDexterity.ResumeLayout(false);
+            this.grpAbilityDexterity.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.grpAbilityStrength.ResumeLayout(false);
+            this.grpAbilityStrength.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.grpInspration.ResumeLayout(false);
             this.grpInspration.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -442,7 +443,7 @@
 
         private System.Windows.Forms.ComboBox cboCharacterName;
         private System.Windows.Forms.Button btnNewCharacter;
-        private System.Windows.Forms.Button btnEditCharacter;
+        private System.Windows.Forms.Button btnSaveCharacter;
         private System.Windows.Forms.Button btnDeleteCharacter;
         private System.Windows.Forms.GroupBox grpAbilities;
         private System.Windows.Forms.GroupBox grpAbilityStrength;

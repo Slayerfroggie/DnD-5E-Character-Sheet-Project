@@ -1,0 +1,47 @@
+All Attributes
+
+Character Basics
+    Character name 
+    Class
+    Level
+    Background
+    Player's name
+    Race
+    Alignment
+    Experience Points
+
+Stats
+    Strength
+    Dexterity
+    Constitution
+    Intelligence
+    Wisdom
+    Charisma
+
+Saving Throws 
+    Strength
+    Dexterity
+    Constitution
+    Intelligence
+    Wisdom
+    Charisma
+
+Skills
+    Acrobatics
+    Animal Handling
+    Arcana
+    Athletics
+    Deception
+    History
+    Insight
+    Intimidation
+    Investigation
+    Medicine
+    Nature
+    Perception
+    Performance
+    Persuasion
+    Religion
+    Sleight of Hand
+    Stealth
+    Survival

@@ -1,0 +1,13 @@
+New Character
+
+user clicks new Character so that they can add a new dnd Character to the database
+
+needs to provide all details of Character. there will be predetermined information in comboboxes, but the user can change it to whatever they want (for homebrew and non standard classes etc.)
+these comboboxes can be class, background, race, level(static) and alignment(static). exp points textbox will chang depending on base level
+
+Ability scores will be blank but when a 0 to 20 is input will automatically update to the corresponding modifier (e.g. 10 = +0 mod). 
+this will also populate the saving throw, skills and passive wisdom with data but the user must tag the skills if they wish them to include skill profiencies (perhaps saving throws could be based off of class once chosen, but still could be altered if willed by user)
+
+profiencieny bonus will always be +2 in character creation but can be changed depending on character level 
+
+(new Characters will always be level 1 if you wish to level up must be done post character creation in the character management)
