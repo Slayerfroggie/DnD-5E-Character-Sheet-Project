@@ -16,6 +16,21 @@ namespace CharacterCreator
         {
             InitializeComponent();
         }
+        
+        public void resetComboBox()
+        {
+            cboRaceOption1.Text = "";
+            cboRaceOption2.Text = "";
+            cboRaceOption3.Text = "";
+            cboRaceOption4.Text = "";
+            cboRaceOption5.Text = "";
+
+            cboRaceOption1.Items.Clear();
+            cboRaceOption2.Items.Clear();
+            cboRaceOption3.Items.Clear();
+            cboRaceOption4.Items.Clear();
+            cboRaceOption5.Items.Clear();
+        }
 
         #region Racial Descriptions
 
@@ -75,9 +90,133 @@ Dwarven Armor Training: You have proficiency with light and medium armor.";
         #endregion
 
         #region General Elf
+        string elfTraits = @"Elf Traits
+
+Your elf character has a variety of natural Abilities, the result of thousands of years of elven refinement.
+
+Ability Score Increase: Your Dexterity score increases by 2.
+
+Age: Although elves reach physical maturity at about the same age as humans, the elven understanding of Adulthood goes beyond physical growth to encompass worldly experience. An elf typically claims Adulthood and an adult name around the age of 100 and can live to be 750 years old.
+
+Alignment: Elves love freedom, variety, and self- expression, so they lean strongly toward the gentler aspects of chaos. They value and protect others’ freedom as well as their own, and they are more often good than not.
+
+Size: Elves range from under 5 to over 6 feet tall and have slender builds. Your size is Medium.
+
+Speed: Your base walking speed is 30 feet.
+
+Darkvision: Accustomed to twilit forests and the night sky, you have superior vision in dark and dim Conditions. You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can’t discern color in Darkness, only shades of gray.
+
+Keen Senses: You have proficiency in the Perception skill.
+
+Fey Ancestry: You have advantage on Saving Throws against being Charmed, and magic can’t put you to sleep.
+
+Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After Resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
+
+Languages: You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.
+
+Subrace: Ancient divides among the elven people resulted in three main subraces: high elves, wood elves, and dark elves, who are commonly called drow.
+Choose one of these subraces. 
+";
         #endregion
 
         #region High Elf
+        string highElfTraits = @"High Elf Traits
+
+As a high elf, you have a keen mind and a mastery of at least the basics of magic.
+
+Ability Score Increase: Your Intelligence scoreincreases by 1.
+
+Elf Weapon Training: You have proficiency withthe longsword, shortsword, shortbow, and longbow.
+
+Cantrip: You know one cantrip of your choice from the wizard spell list. Intelligence is your spellcasting ability for it.
+
+Extra Language: You can speak, read, and write one extra language of your choice.
+";
+        #endregion
+
+        #region Wood Elf
+        string woodElfTraits = @"Wood Elf Traits
+
+As a Wood Elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. 
+
+Ability Score Increase: Your Wisdom score increases by 1.
+
+Elf Weapon Training: You have proficiency with thelongsword, shortsword, shortbow, and longbow.
+
+Fleet of Foot: Your base walking speed increases to 35 feet.
+
+Mask of the Wild: You can attempt to hide even when you are only lightly obscured by foliage, heavy rain, falling snow, mist, and other natural phenomena.
+";
+        #endregion
+
+        #region Dark Elf
+        string darkElfTraits = @"Dark Elf (Drow)
+
+Also called Dark Elves, the Drow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes (so pale as to be mistaken for white) in shades of lilac, silver, pink, red, and blue. They tend to be smaller and thinner than most elves. Drow adventurers are rare, and the race does not exist in all worlds.
+
+Ability Score Increase: Your Charisma score increases by 1.
+
+Superior Darkvision: Your darkvision has a radius of 120 feet.
+
+Sunlight Sensitivity: You have disadvantage on attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of your attack, or whatever you are trying to perceive is in direct sunlight.
+
+Drow Magic: You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once per day. When you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells.
+
+Drow Weapon Training: You have proficiency with rapiers, shortswords, and hand crossbows.";
+
+        #endregion
+
+        #region General Gnome
+        string gnomeTraits = @"Gnome Traits
+
+Your gnome character has certain characteristics in Common with all other Gnomes.
+
+Ability Score Increase: Your Intelligence score increases by 2.
+
+Age: Gnomes mature at the same rate humans do, and most are expected to settle down into an adult life by around age 40. They can live 350 to almost 500 years.
+
+Alignment: Gnomes are most often good. Those who tend toward law are sages, engineers, researchers, scholars, investigators, or inventors. Those who tend toward chaos are minstrels, tricksters, wanderers, or fanciful jewelers. Gnomes are good-hearted, and even the tricksters among them are more playful than vicious.
+
+Size: Gnomes are between 3 and 4 feet tall and average about 40 pounds. Your size is Small.
+
+Speed: Your base walking speed is 25 feet.
+
+Darkvision: Accustomed to life Underground, you have superior vision in dark and dim Conditions. You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can’t discern color in Darkness, only shades of gray.
+
+Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma Saving Throws against magic.
+
+Languages: You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.
+
+Subrace: Two subraces of gnomes are found among the worlds of D&D: forest gnomes and rock gnomes. Choose one of these subraces.
+";
+        #endregion
+
+        #region Forest Gnome
+        #endregion
+
+        #region Rock Gnome
+        #endregion
+
+        #region Half-Elf
+
+        #endregion
+
+        #region Half-Orc
+        #endregion
+
+        #region General Halfling
+        #endregion
+
+        #region Lightfoot Halfling
+        #endregion
+
+        #region Stout Halfling
+        #endregion
+
+        #region Human
+        #endregion
+
+        #region Tiefling
         #endregion
 
         #endregion
@@ -85,7 +224,8 @@ Dwarven Armor Training: You have proficiency with light and medium armor.";
         #region Racial Items
         public void DragonbornAncestry()
         {
-            cboRaceOption1.Items.Clear();
+            resetComboBox();
+
             cboRaceOption1.Items.Add("Black Dragon");
             cboRaceOption1.Items.Add("Blue Dragon");
             cboRaceOption1.Items.Add("Brass Dragon");
@@ -100,10 +240,57 @@ Dwarven Armor Training: You have proficiency with light and medium armor.";
 
         public void DwarvenTools()
         {
-            cboRaceOption1.Items.Clear();
+            resetComboBox();
+
+            cboRaceOption1.Text = "Tool Type";
+
             cboRaceOption1.Items.Add("Smith's Tools");
             cboRaceOption1.Items.Add("Brewer's Supplies");
             cboRaceOption1.Items.Add("Mason's Tools");
+        }
+
+        public void highElfCantrip()
+        {
+            resetComboBox();
+
+            cboRaceOption1.Text = "Cantrip";
+
+            cboRaceOption1.Items.Add("Acid Splash");
+            cboRaceOption1.Items.Add("Blade Ward");
+            cboRaceOption1.Items.Add("Chill Touch");
+            cboRaceOption1.Items.Add("Dancing Lights");
+            cboRaceOption1.Items.Add("Fire Bolt");
+            cboRaceOption1.Items.Add("Friends");
+            cboRaceOption1.Items.Add("Light");
+            cboRaceOption1.Items.Add("Mage Hand");
+            cboRaceOption1.Items.Add("Mending");
+            cboRaceOption1.Items.Add("Message");
+            cboRaceOption1.Items.Add("Minor Illusion");
+            cboRaceOption1.Items.Add("Poison Spray");
+            cboRaceOption1.Items.Add("Prestidigitation");
+            cboRaceOption1.Items.Add("Ray of Frost");
+            cboRaceOption1.Items.Add("Shocking Grasp");
+            cboRaceOption1.Items.Add("True Strike");
+        }
+
+        public void ExtraLanguages()
+        {
+            cboRaceOption2.Text = "Languages";
+
+            cboRaceOption2.Items.Add("Abyssal");
+            cboRaceOption2.Items.Add("Celestial");
+            cboRaceOption2.Items.Add("Deep Speech");
+            cboRaceOption2.Items.Add("Draconic");
+            cboRaceOption2.Items.Add("Dwarvish");
+            cboRaceOption2.Items.Add("Giant");
+            cboRaceOption2.Items.Add("Gnomish");
+            cboRaceOption2.Items.Add("Goblin");
+            cboRaceOption2.Items.Add("Halfling");
+            cboRaceOption2.Items.Add("Infernal");
+            cboRaceOption2.Items.Add("Orc");
+            cboRaceOption2.Items.Add("Primordial");
+            cboRaceOption2.Items.Add("Sylvan");
+            cboRaceOption2.Items.Add("Undercommon");
         }
 
         #endregion
@@ -114,41 +301,87 @@ Dwarven Armor Training: You have proficiency with light and medium armor.";
 
             if (e.Node.Text == "Dragonborn")
             {
-                txtRaceDetails.Text = "";
                 txtRaceDetails.Text = dragonbornTraits;
 
-                cboRaceOption1.Text = "";
-                cboRaceOption1.Text = "Ancestry Type";
                 DragonbornAncestry();
+                cboRaceOption1.Text = "Ancestry Type";
             }
             else if (e.Node.Text == "Dwarf")
             {
-                txtRaceDetails.Text = "";
+                resetComboBox();
                 txtRaceDetails.Text = dwarfTraits;
-
-                cboRaceOption1.Text = "";
             }
             else if (e.Node.Text == "Hill Dwarf")
             {
-                txtRaceDetails.Text = "";
                 txtRaceDetails.Text = hillDwarfTraits;
 
-                cboRaceOption1.Text = "";
-                cboRaceOption1.Text = "Tool Type";
                 DwarvenTools();
             }
             else if (e.Node.Text == "Mountain Dwarf")
             {
-                txtRaceDetails.Text = "";
                 txtRaceDetails.Text = mountainDwarfTraits;
 
-                cboRaceOption1.Text = "";
-                cboRaceOption1.Text = "Tool Type";
                 DwarvenTools();
-
-
             }
+            else if (e.Node.Text == "Elf")
+            {
+                resetComboBox();
 
+                txtRaceDetails.Text = elfTraits;
+            }
+            else if (e.Node.Text == "High Elf")
+            {
+                txtRaceDetails.Text = highElfTraits;
+
+                highElfCantrip();
+
+                ExtraLanguages();
+            }
+            else if (e.Node.Text == "Wood Elf")
+            {
+                resetComboBox();
+
+                txtRaceDetails.Text = woodElfTraits;
+            }
+            else if (e.Node.Text == "Dark Elf (Drow)")
+            {
+                resetComboBox();
+
+                txtRaceDetails.Text = darkElfTraits;
+            }
+            else if (e.Node.Text == "Gnome")
+            {
+                resetComboBox();
+
+                txtRaceDetails.Text = gnomeTraits;
+            }
+            else if (e.Node.Text == "Forest Gnome")
+            {
+            }
+            else if (e.Node.Text == "Rock Gnome")
+            {
+            }
+            else if (e.Node.Text == "Half-Elf")
+            {
+            }
+            else if (e.Node.Text == "Half-Orc")
+            {
+            }
+            else if (e.Node.Text == "Halfling")
+            {
+            }
+            else if (e.Node.Text == "Lightfoot Halfling")
+            {
+            }
+            else if (e.Node.Text == "Stout Halfling")
+            {
+            }
+            else if (e.Node.Text == "Halfling")
+            {
+            }
+            else if (e.Node.Text == "Tiefling")
+            {
+            }
 
         }
     }
