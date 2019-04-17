@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Dragonborn");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Hill Dwarf");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Mountain Dwarf");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Dwarf", new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("High Elf");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Wood Elf");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dark Elf (Drow)");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Elf", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Forest Gnome");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Rock Gnome");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Gnome", new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Half-Elf");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Half-Orc");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Lightfoot Halfling");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Stout Halfling");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Halfling", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15});
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Human");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Tiefling");
+            System.Windows.Forms.TreeNode treeNode109 = new System.Windows.Forms.TreeNode("Dragonborn");
+            System.Windows.Forms.TreeNode treeNode110 = new System.Windows.Forms.TreeNode("Hill Dwarf");
+            System.Windows.Forms.TreeNode treeNode111 = new System.Windows.Forms.TreeNode("Mountain Dwarf");
+            System.Windows.Forms.TreeNode treeNode112 = new System.Windows.Forms.TreeNode("Dwarf", new System.Windows.Forms.TreeNode[] {
+            treeNode110,
+            treeNode111});
+            System.Windows.Forms.TreeNode treeNode113 = new System.Windows.Forms.TreeNode("High Elf");
+            System.Windows.Forms.TreeNode treeNode114 = new System.Windows.Forms.TreeNode("Wood Elf");
+            System.Windows.Forms.TreeNode treeNode115 = new System.Windows.Forms.TreeNode("Dark Elf (Drow)");
+            System.Windows.Forms.TreeNode treeNode116 = new System.Windows.Forms.TreeNode("Elf", new System.Windows.Forms.TreeNode[] {
+            treeNode113,
+            treeNode114,
+            treeNode115});
+            System.Windows.Forms.TreeNode treeNode117 = new System.Windows.Forms.TreeNode("Forest Gnome");
+            System.Windows.Forms.TreeNode treeNode118 = new System.Windows.Forms.TreeNode("Rock Gnome");
+            System.Windows.Forms.TreeNode treeNode119 = new System.Windows.Forms.TreeNode("Gnome", new System.Windows.Forms.TreeNode[] {
+            treeNode117,
+            treeNode118});
+            System.Windows.Forms.TreeNode treeNode120 = new System.Windows.Forms.TreeNode("Half-Elf");
+            System.Windows.Forms.TreeNode treeNode121 = new System.Windows.Forms.TreeNode("Half-Orc");
+            System.Windows.Forms.TreeNode treeNode122 = new System.Windows.Forms.TreeNode("Lightfoot Halfling");
+            System.Windows.Forms.TreeNode treeNode123 = new System.Windows.Forms.TreeNode("Stout Halfling");
+            System.Windows.Forms.TreeNode treeNode124 = new System.Windows.Forms.TreeNode("Halfling", new System.Windows.Forms.TreeNode[] {
+            treeNode122,
+            treeNode123});
+            System.Windows.Forms.TreeNode treeNode125 = new System.Windows.Forms.TreeNode("Human");
+            System.Windows.Forms.TreeNode treeNode126 = new System.Windows.Forms.TreeNode("Tiefling");
             this.tabCharacterCreator = new System.Windows.Forms.TabControl();
             this.tpgRace = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -132,6 +132,7 @@
             this.cboRaceOption3.Name = "cboRaceOption3";
             this.cboRaceOption3.Size = new System.Drawing.Size(176, 33);
             this.cboRaceOption3.TabIndex = 5;
+            this.cboRaceOption3.TextChanged += new System.EventHandler(this.cboRaceOption3_TextChanged);
             // 
             // cboRaceOption5
             // 
@@ -152,6 +153,7 @@
             this.cboRaceOption4.Name = "cboRaceOption4";
             this.cboRaceOption4.Size = new System.Drawing.Size(176, 33);
             this.cboRaceOption4.TabIndex = 6;
+            this.cboRaceOption4.TextChanged += new System.EventHandler(this.cboRaceOption4_TextChanged);
             // 
             // cboRaceOption2
             // 
@@ -162,6 +164,7 @@
             this.cboRaceOption2.Name = "cboRaceOption2";
             this.cboRaceOption2.Size = new System.Drawing.Size(176, 33);
             this.cboRaceOption2.TabIndex = 7;
+            this.cboRaceOption2.TextChanged += new System.EventHandler(this.cboRaceOption2_TextChanged);
             // 
             // cboRaceOption1
             // 
@@ -172,6 +175,7 @@
             this.cboRaceOption1.Name = "cboRaceOption1";
             this.cboRaceOption1.Size = new System.Drawing.Size(176, 33);
             this.cboRaceOption1.TabIndex = 4;
+            this.cboRaceOption1.TextChanged += new System.EventHandler(this.cboRaceOption1_TextChanged);
             // 
             // btnChooseRace
             // 
@@ -186,12 +190,14 @@
             // 
             // txtRaceDetails
             // 
+            this.txtRaceDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRaceDetails.Location = new System.Drawing.Point(350, 8);
             this.txtRaceDetails.Multiline = true;
             this.txtRaceDetails.Name = "txtRaceDetails";
             this.txtRaceDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRaceDetails.Size = new System.Drawing.Size(546, 473);
             this.txtRaceDetails.TabIndex = 1;
+            this.txtRaceDetails.Text = "Please Choose a Race or Subrace";
             // 
             // trvRaces
             // 
@@ -199,52 +205,52 @@
             this.trvRaces.HideSelection = false;
             this.trvRaces.Location = new System.Drawing.Point(8, 6);
             this.trvRaces.Name = "trvRaces";
-            treeNode1.Name = "nodDragonborn";
-            treeNode1.Text = "Dragonborn";
-            treeNode2.Name = "nodDwarfHill";
-            treeNode2.Text = "Hill Dwarf";
-            treeNode3.Name = "nodDwarfMountain";
-            treeNode3.Text = "Mountain Dwarf";
-            treeNode4.Name = "nodDwarf";
-            treeNode4.Text = "Dwarf";
-            treeNode5.Name = "nodElfHigh";
-            treeNode5.Text = "High Elf";
-            treeNode6.Name = "nodElfWood";
-            treeNode6.Text = "Wood Elf";
-            treeNode7.Name = "nodElfDark";
-            treeNode7.Text = "Dark Elf (Drow)";
-            treeNode8.Name = "nodElf";
-            treeNode8.Text = "Elf";
-            treeNode9.Name = "nodGnomeForest";
-            treeNode9.Text = "Forest Gnome";
-            treeNode10.Name = "nodGnomeRock";
-            treeNode10.Text = "Rock Gnome";
-            treeNode11.Name = "nodGnome";
-            treeNode11.Text = "Gnome";
-            treeNode12.Name = "nodHalfElf";
-            treeNode12.Text = "Half-Elf";
-            treeNode13.Name = "nodHalfOrc";
-            treeNode13.Text = "Half-Orc";
-            treeNode14.Name = "nodHalflingLightfoot";
-            treeNode14.Text = "Lightfoot Halfling";
-            treeNode15.Name = "nodHalflingStout";
-            treeNode15.Text = "Stout Halfling";
-            treeNode16.Name = "nodHalfling";
-            treeNode16.Text = "Halfling";
-            treeNode17.Name = "nodHuman";
-            treeNode17.Text = "Human";
-            treeNode18.Name = "nodTiefling";
-            treeNode18.Text = "Tiefling";
+            treeNode109.Name = "nodDragonborn";
+            treeNode109.Text = "Dragonborn";
+            treeNode110.Name = "nodDwarfHill";
+            treeNode110.Text = "Hill Dwarf";
+            treeNode111.Name = "nodDwarfMountain";
+            treeNode111.Text = "Mountain Dwarf";
+            treeNode112.Name = "nodDwarf";
+            treeNode112.Text = "Dwarf";
+            treeNode113.Name = "nodElfHigh";
+            treeNode113.Text = "High Elf";
+            treeNode114.Name = "nodElfWood";
+            treeNode114.Text = "Wood Elf";
+            treeNode115.Name = "nodElfDark";
+            treeNode115.Text = "Dark Elf (Drow)";
+            treeNode116.Name = "nodElf";
+            treeNode116.Text = "Elf";
+            treeNode117.Name = "nodGnomeForest";
+            treeNode117.Text = "Forest Gnome";
+            treeNode118.Name = "nodGnomeRock";
+            treeNode118.Text = "Rock Gnome";
+            treeNode119.Name = "nodGnome";
+            treeNode119.Text = "Gnome";
+            treeNode120.Name = "nodHalfElf";
+            treeNode120.Text = "Half-Elf";
+            treeNode121.Name = "nodHalfOrc";
+            treeNode121.Text = "Half-Orc";
+            treeNode122.Name = "nodHalflingLightfoot";
+            treeNode122.Text = "Lightfoot Halfling";
+            treeNode123.Name = "nodHalflingStout";
+            treeNode123.Text = "Stout Halfling";
+            treeNode124.Name = "nodHalfling";
+            treeNode124.Text = "Halfling";
+            treeNode125.Name = "nodHuman";
+            treeNode125.Text = "Human";
+            treeNode126.Name = "nodTiefling";
+            treeNode126.Text = "Tiefling";
             this.trvRaces.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode4,
-            treeNode8,
-            treeNode11,
-            treeNode12,
-            treeNode13,
-            treeNode16,
-            treeNode17,
-            treeNode18});
+            treeNode109,
+            treeNode112,
+            treeNode116,
+            treeNode119,
+            treeNode120,
+            treeNode121,
+            treeNode124,
+            treeNode125,
+            treeNode126});
             this.trvRaces.Size = new System.Drawing.Size(337, 556);
             this.trvRaces.TabIndex = 0;
             this.trvRaces.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvRaces_NodeMouseClick);
