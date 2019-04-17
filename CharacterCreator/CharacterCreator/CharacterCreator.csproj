@@ -57,12 +57,6 @@
     <Compile Include="frmCharacterStats.Designer.cs">
       <DependentUpon>frmCharacterStats.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCharacterDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCharacterDetails.Designer.cs">
-      <DependentUpon>frmCharacterDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCharacterCreator.resx">

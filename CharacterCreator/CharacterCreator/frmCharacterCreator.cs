@@ -12,11 +12,14 @@ namespace CharacterCreator
 {
     public partial class frmCharacterCreator : Form
     {
+        #region init
         public frmCharacterCreator()
         {
             InitializeComponent();
         }
-        
+        #endregion
+
+        #region General Methods
         public void resetComboBox()
         {
             cboRaceOption1.Text = "";
@@ -31,11 +34,12 @@ namespace CharacterCreator
             cboRaceOption4.Items.Clear();
             cboRaceOption5.Items.Clear();
         }
+        #endregion
 
         #region Racial Descriptions
 
         #region Dragonborn   
-        string dragonbornTraits = "Dragonborn Traits\r\n\r\nYour Draconic heritage manifests in a variety of traits you share with other dragonborn.\r\n\r\nAbility Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.\r\n\r\nAge: Young dragonborn grow quickly.They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach Adulthood by 15. They live to be around 80.\r\n\r\nAlignment: Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil.Most dragonborn are good, but those who side with evil can be terrible villains.\r\n\r\nSize: Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds.Your size is Medium.\r\n\r\nSpeed: Your base walking speed is 30 feet.\r\n\r\nDraconic Ancestry\r\n\r\nDragon Damage Type Breath Weapon\r\nBlack   Acid    5 by 30 ft.line (Dex.save)\r\nBlue    Lightning   5 by 30 ft.line (Dex.save)\r\nBrass   Fire    5 by 30 ft.line (Dex.save)\r\nBronze  Lightning   5 by 30 ft.line (Dex.save)\r\nCopper  Acid    5 by 30 ft.line (Dex.save)\r\nGold    Fire    15 ft.cone (Dex.save)\r\nGreen   Poison  15 ft.cone (Con.save)\r\nRed Fire    15 ft.cone (Dex.save)\r\nSilver  Cold    15 ft.cone (Con.save)\r\nWhite   Cold    15 ft.cone (Con.save)\r\n\r\nDraconic Ancestry: You have Draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage Resistance are determined by the dragon type, as shown in the table.\r\n\r\nBreath Weapon: You can use your action to exhale destructive energy.Your Draconic ancestry determines the size, shape, and damage type of the exhalation.\r\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your Draconic ancestry.The DC for this saving throw equals 8 + your Constitution modifier + your Proficiency Bonus.A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\r\nAfter you use your breath weapon, you can’t use it again until you complete a short or Long Rest.\r\n\r\nDamage Resistance: You have Resistance to the damage type associated with your Draconic ancestry.\r\n\r\nLanguages: You can speak, read, and write Common and Draconic.Draconic is thought to be one of the oldest Languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.\r\n\r\nAttributes\r\nSize: Medium\r\nSpeed: 30";
+        string dragonbornTraits = "Dragonborn Traits\r\n\r\nYour Draconic heritage manifests in a variety of traits you share with other dragonborn.\r\n\r\nAbility Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.\r\n\r\nAge: Young dragonborn grow quickly.They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach Adulthood by 15. They live to be around 80.\r\n\r\nAlignment: Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil.Most dragonborn are good, but those who side with evil can be terrible villains.\r\n\r\nSize: Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds.Your size is Medium.\r\n\r\nSpeed: Your base walking speed is 30 feet.\r\n\r\nDraconic Ancestry\r\n\r\nDragon Damage Type Breath Weapon\r\nBlack   Acid    5 by 30 ft.line (Dex.save)\r\nBlue    Lightning   5 by 30 ft.line (Dex.save)\r\nBrass   Fire    5 by 30 ft.line (Dex.save)\r\nBronze  Lightning   5 by 30 ft.line (Dex.save)\r\nCopper  Acid    5 by 30 ft.line (Dex.save)\r\nGold    Fire    15 ft.cone (Dex.save)\r\nGreen   Poison  15 ft.cone (Con.save)\r\nRed Fire    15 ft.cone (Dex.save)\r\nSilver  Cold    15 ft.cone (Con.save)\r\nWhite   Cold    15 ft.cone (Con.save)\r\n\r\nDraconic Ancestry: You have Draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage Resistance are determined by the dragon type, as shown in the table.\r\n\r\nBreath Weapon: You can use your action to exhale destructive energy.Your Draconic ancestry determines the size, shape, and damage type of the exhalation.\r\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your Draconic ancestry.The DC for this saving throw equals 8 + your Constitution modifier + your Proficiency Bonus.A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\r\nAfter you use your breath weapon, you can’t use it again until you complete a short or Long Rest.\r\n\r\nDamage Resistance: You have Resistance to the damage type associated with your Draconic ancestry.\r\n\r\nLanguages: You can speak, read, and write Common and Draconic.Draconic is thought to be one of the oldest Languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.";
         #endregion
 
         #region General Dwarf
@@ -65,10 +69,6 @@ Tool Proficiency: You gain proficiency with the artisan’s tools of your choice
 Stonecunning: Whenever you make an Intelligence (History) check related to the Origin of stonework, you are considered proficient in the History skill and add double your Proficiency Bonus to the check, instead of your normal Proficiency Bonus.
 
 Languages: You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.
-
-Attributes
-Size: Medium
-Speed: 25
 
 Subraces: Two main subraces of dwarves populate theworlds of D&D: hill dwarves and mountain dwarves.
 Choose one of these subraces.";
@@ -119,10 +119,6 @@ Fey Ancestry: You have advantage on Saving Throws against being Charmed, and mag
 Trance: Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After Resting in this way, you gain the same benefit that a human does from 8 hours of sleep.
 
 Languages: You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.
-
-Attributes
-Size: Medium
-Speed: 30
 
 Subrace: Ancient divides among the elven people resulted in three main subraces: high elves, wood elves, and dark elves, who are commonly called drow.
 Choose one of these subraces. 
@@ -197,10 +193,6 @@ Gnome Cunning: You have advantage on all Intelligence, Wisdom, and Charisma Savi
 
 Languages: You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.
 
-Attributes
-Size: Small
-Speed: 25
-
 Subrace: Two subraces of Gnomes are found among the worlds of D&D: Forest Gnomes and Rock Gnomes. Choose one of these subraces.
 ";
         #endregion
@@ -261,29 +253,126 @@ Fey Ancestry: You have advantage on Saving Throws against being Charmed, and mag
 Skill Versatility: You gain proficiency in two Skills of your choice.
 
 Languages: You can speak, read, and write Common, Elvish, and one extra language of your choice.
-
-Attributes
-Size: Medium
-Speed: 30
 ";
         #endregion
 
         #region Half-Orc
+        string halfOrcTraits = @"Half-Orc Traits
+
+Your half-orc character has certain traits deriving from your orc ancestry.
+
+Ability Score Increase: Your Strength score increases by 2, and your Constitution score increases by 1.
+
+Age: Half-Orcs mature a little faster than humans, reaching Adulthood around age 14. They age noticeably faster and rarely live longer than 75 years.
+
+Alignment: Half-Orcs inherit a tendency toward chaos from their orc Parents and are not strongly inclined toward good. Half-Orcs raised among orcs and willing to live out their lives among them are usually evil.
+
+Size: Half-Orcs are somewhat larger and bulkier than humans, and they range from 5 to well over 6 feet tall. Your size is Medium.
+
+Speed: Your base walking speed is 30 feet.
+
+Darkvision: Thanks to your orc blood, you have superior vision in dark and dim Conditions. You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can’t discern color in Darkness, only shades of gray.
+
+Menacing: You gain proficiency in the Intimidation skill.
+
+Relentless Endurance: When you are reduced to 0 Hit Points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a Long Rest.
+
+Savage Attacks: When you score a critical hit with a melee weapon Attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.
+
+Languages: You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.
+";
         #endregion
 
         #region General Halfling
+        string halflingTraits = @"Halfling Traits
+
+Your halfling character has a number of traits in Common with all other Halflings.
+
+Ability Score Increase: Your Dexterity score increases by 2.
+
+Age: A halfling reaches Adulthood at the age of 20 and generally lives into the middle of his or her second century.
+
+Alignment: Most Halflings are lawful good. As a rule, they are good-hearted and kind, hate to see others in pain, and have no tolerance for oppression. They are also very orderly and traditional, leaning heavily on the support of their community and the comfort of their old ways.
+
+Size: Halflings average about 3 feet tall and weigh about 40 pounds. Your size is Small.
+
+Speed: Your base walking speed is 25 feet.
+
+Lucky: When you roll a 1 on The D20 for an Attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.
+
+Brave: You have advantage on Saving Throws against being Frightened.
+
+Halfling Nimbleness: You can move through the space of any creature that is of a size larger than yours.
+
+Languages: You can speak, read, and write Common and Halfling. The Halfling language isn’t Secret, but Halflings are loath to share it with others. They write very little, so they don’t have a rich body of literature. Their oral tradition, however, is very strong. Almost all Halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.
+
+Subrace: The two main kinds of halfling, lightfoot and stout, are more like closely related families than true subraces.
+Choose one of these subraces.
+";
         #endregion
 
         #region Lightfoot Halfling
+        string lightfootHalflingTraits = @"Lightfoot Halfling Traits
+
+As a lightfoot halfling, you can easily hide from notice, even using other people as cover.
+
+Ability Score Increase: Your Charisma score increases by 1.
+
+Naturally Stealthy: You can attempt to hide even when you are obscured only by a creature that is at least one size larger than you.
+";
         #endregion
 
         #region Stout Halfling
+        string stoutHalflingTraits = @"Stout Halfling Traits
+
+As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood.
+
+Ability Score Increase: Your Constitution score increases by 1.
+
+Stout Resilience: You have advantage on saving throws against poison, and you have resistance against poison damage.
+";
         #endregion
 
         #region Human
+        string humanTraits = @"Human Traits
+
+It’s hard to make generalizations about humans, but your human character has these traits.
+
+Ability Score Increase: Your Ability Scores each increase by 1.
+
+Age: Humans reach Adulthood in their late teens and live less than a century.
+
+Alignment: Humans tend toward no particular Alignment. The best and the worst are found among them.
+
+Size: Humans vary widely in height and build, from barely 5 feet to well over 6 feet tall. Regardless of your position in that range, your size is Medium.
+
+Speed: Your base walking speed is 30 feet.
+
+Languages: You can speak, read, and write Common and one extra language of your choice. Humans typically learn the Languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their Speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.";
         #endregion
 
         #region Tiefling
+        string tieflingTraits = @"Tiefling Traits
+
+Tieflings share certain Racial Traits as a result of their Infernal descent.
+
+Ability Score Increase: Your Intelligence score increases by 1, and your Charisma score increases by 2.
+
+Age: Tieflings mature at the same rate as humans but live a few years longer.
+
+Alignment: Tieflings might not have an innate tendency toward evil, but many of them end up there. Evil or not, an independent Nature inclines many tieflings toward a chaotic Alignment.
+
+Size: Tieflings are about the same size and build as humans. Your size is Medium.
+
+Speed: Your base walking speed is 30 feet.
+
+Darkvision: Thanks to your Infernal heritage, you have superior vision in dark and dim Conditions. You can see in dim light within 60 feet of you as if it were bright light, and in Darkness as if it were dim light. You can’t discern color in Darkness, only shades of gray.
+
+Hellish Resistance: You have Resistance to fire damage.
+
+Infernal Legacy. You know the Thaumaturgy cantrip. When you reach 3rd level, you can cast the Hellish Rebuke spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a Long Rest. When you reach 5th level, you can cast the Darkness spell once with this trait and regain the ability to do so when you finish a Long Rest. Charisma is your Spellcasting ability for these Spells.
+
+Languages: You can speak, read, and write Common and Infernal.";
         #endregion
 
         #endregion
@@ -379,6 +468,27 @@ Speed: 30
                 cboRaceOption5.Items.Add("Primordial");
                 cboRaceOption5.Items.Add("Sylvan");
                 cboRaceOption5.Items.Add("Undercommon");
+            }
+            else if (txtRaceDetails.Text == humanTraits)
+            {
+                resetComboBox();
+
+                cboRaceOption1.Text = "Languages";
+
+                cboRaceOption1.Items.Add("Abyssal");
+                cboRaceOption1.Items.Add("Celestial");
+                cboRaceOption1.Items.Add("Deep Speech");
+                cboRaceOption1.Items.Add("Draconic");
+                cboRaceOption1.Items.Add("Dwarvish");
+                cboRaceOption1.Items.Add("Giant");
+                cboRaceOption1.Items.Add("Gnomish");
+                cboRaceOption1.Items.Add("Goblin");
+                cboRaceOption1.Items.Add("Halfling");
+                cboRaceOption1.Items.Add("Infernal");
+                cboRaceOption1.Items.Add("Orc");
+                cboRaceOption1.Items.Add("Primordial");
+                cboRaceOption1.Items.Add("Sylvan");
+                cboRaceOption1.Items.Add("Undercommon");
             }
         }
 
@@ -508,6 +618,9 @@ Speed: 30
             }
             else if (e.Node.Text == "Gnome")
             {
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\Gnome.wav");
+                player.Play();
+
                 resetComboBox();
 
                 txtRaceDetails.Text = gnomeTraits;
@@ -536,26 +649,45 @@ Speed: 30
             }
             else if (e.Node.Text == "Half-Orc")
             {
+                resetComboBox();
+
+                txtRaceDetails.Text = halfOrcTraits;
             }
             else if (e.Node.Text == "Halfling")
             {
+                resetComboBox();
+
+                txtRaceDetails.Text = halflingTraits;
             }
             else if (e.Node.Text == "Lightfoot Halfling")
             {
+                resetComboBox();
+
+                txtRaceDetails.Text = lightfootHalflingTraits;
             }
             else if (e.Node.Text == "Stout Halfling")
             {
+                resetComboBox();
+
+                txtRaceDetails.Text = stoutHalflingTraits;
             }
-            else if (e.Node.Text == "Halfling")
+            else if (e.Node.Text == "Human")
             {
+                txtRaceDetails.Text = humanTraits;
+
+                ExtraLanguages();
             }
             else if (e.Node.Text == "Tiefling")
             {
+                resetComboBox();
+
+                txtRaceDetails.Text = tieflingTraits;
             }
 
         }
         #endregion
 
+        #region Half-Elf ComboBox Trait changes
         private void cboRaceOption1_TextChanged(object sender, EventArgs e)
         {
             if(trvRaces.SelectedNode.Text == "Half-Elf")
@@ -579,5 +711,6 @@ Speed: 30
             if (trvRaces.SelectedNode.Text == "Half-Elf")
                 cboRaceOption3.Items.Remove(cboRaceOption4.Text);
         }
+        #endregion
     }
 }

@@ -411,7 +411,7 @@
             this.Controls.Add(this.btnNewCharacter);
             this.Controls.Add(this.cboCharacterName);
             this.Name = "frmCharacterStats";
-            this.Text = "Form1";
+            this.Text = "Ampersand Tool";
             this.grpAbilities.ResumeLayout(false);
             this.grpAbilityCharisma.ResumeLayout(false);
             this.grpAbilityCharisma.PerformLayout();

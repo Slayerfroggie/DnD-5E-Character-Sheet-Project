@@ -17,11 +17,9 @@ namespace CharacterCreator
             InitializeComponent();
         }
 
-        frmCharacterCreator characterCreator = new frmCharacterCreator();
-
         private void btnNewCharacter_Click(object sender, EventArgs e)
         {
-            characterCreator.Show();
+            (new frmCharacterCreator()).Show();
         }
     }
 }
