@@ -19,7 +19,12 @@ namespace CharacterCreator
 
         private void btnNewCharacter_Click(object sender, EventArgs e)
         {
-            (new frmCharacterCreator()).Show();
+            // old method
+            //new frmCharacterCreator().Show();
+
+            //this disables the Stats form whilst the creator form is open
+            frmCharacterCreator f2 = new frmCharacterCreator();
+            f2.ShowDialog(this);
         }
     }
 }
