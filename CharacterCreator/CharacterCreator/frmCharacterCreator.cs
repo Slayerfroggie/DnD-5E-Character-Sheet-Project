@@ -17,6 +17,11 @@ namespace CharacterCreator
         {
             InitializeComponent();
         }
+
+        private void frmCharacterCreator_Load(object sender, EventArgs e)
+        {
+            hideAllComboBoxes();
+        }
         #endregion
 
         #region General Methods
@@ -33,6 +38,15 @@ namespace CharacterCreator
             cboRaceOption3.Items.Clear();
             cboRaceOption4.Items.Clear();
             cboRaceOption5.Items.Clear();
+        }
+
+        public void hideAllComboBoxes()
+        {
+            cboRaceOption1.Hide();
+            cboRaceOption2.Hide();
+            cboRaceOption3.Hide();
+            cboRaceOption4.Hide();
+            cboRaceOption5.Hide();
         }
         #endregion
 
@@ -382,6 +396,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             resetComboBox();
 
+            cboRaceOption1.Show();
             cboRaceOption1.Items.Add("Black Dragon");
             cboRaceOption1.Items.Add("Blue Dragon");
             cboRaceOption1.Items.Add("Brass Dragon");
@@ -398,6 +413,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             resetComboBox();
 
+            cboRaceOption1.Show();
             cboRaceOption1.Text = "Tool Type";
 
             cboRaceOption1.Items.Add("Smith's Tools");
@@ -409,6 +425,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             resetComboBox();
 
+            cboRaceOption1.Show();
             cboRaceOption1.Text = "Cantrip";
 
             cboRaceOption1.Items.Add("Acid Splash");
@@ -433,6 +450,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             if (txtRaceDetails.Text == highElfTraits)
             {
+                cboRaceOption2.Show();
                 cboRaceOption2.Text = "Languages";
 
                 cboRaceOption2.Items.Add("Abyssal");
@@ -452,6 +470,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             }
             else if (txtRaceDetails.Text == halfElfTraits)
             {
+                cboRaceOption5.Show();
                 cboRaceOption5.Text = "Languages";
 
                 cboRaceOption5.Items.Add("Abyssal");
@@ -473,6 +492,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             {
                 resetComboBox();
 
+                cboRaceOption1.Show();
                 cboRaceOption1.Text = "Languages";
 
                 cboRaceOption1.Items.Add("Abyssal");
@@ -496,6 +516,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             resetComboBox();
 
+            cboRaceOption1.Show();
             cboRaceOption1.Text = "Ability 1";
 
             cboRaceOption1.Items.Add("Constitution");
@@ -504,6 +525,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             cboRaceOption1.Items.Add("Strength");
             cboRaceOption1.Items.Add("Wisdom");
 
+            cboRaceOption2.Show();
             cboRaceOption2.Text = "Ability 2";
 
             cboRaceOption2.Items.Add("Constitution");
@@ -516,6 +538,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void halfElfSkillProfiency()
         {
+            cboRaceOption3.Show();
             cboRaceOption3.Text = "Skill 1";
 
             cboRaceOption3.Items.Add("Acrobatics");
@@ -537,6 +560,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             cboRaceOption3.Items.Add("Stealth");
             cboRaceOption3.Items.Add("Survival");
 
+            cboRaceOption4.Show();
             cboRaceOption4.Text = "Skill 2";
 
             cboRaceOption4.Items.Add("Acrobatics");
@@ -569,77 +593,105 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Dragonborn")
             {
                 txtRaceDetails.Text = dragonbornTraits;
+                
+                hideAllComboBoxes();
 
                 DragonbornAncestry();
+                
                 cboRaceOption1.Text = "Ancestry Type";
             }
-            else if (e.Node.Text == "Dwarf")
+
+            if (e.Node.Text == "Dwarf")
             {
-                resetComboBox();
                 txtRaceDetails.Text = dwarfTraits;
+
+                resetComboBox();
+                hideAllComboBoxes();
             }
-            else if (e.Node.Text == "Hill Dwarf")
+
+            if (e.Node.Text == "Hill Dwarf")
             {
                 txtRaceDetails.Text = hillDwarfTraits;
 
+                hideAllComboBoxes();
+                
                 DwarvenTools();
             }
-            else if (e.Node.Text == "Mountain Dwarf")
+
+            if (e.Node.Text == "Mountain Dwarf")
             {
                 txtRaceDetails.Text = mountainDwarfTraits;
 
+                hideAllComboBoxes();
+                
                 DwarvenTools();
             }
-            else if (e.Node.Text == "Elf")
+
+            if (e.Node.Text == "Elf")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = elfTraits;
             }
-            else if (e.Node.Text == "High Elf")
+
+            if (e.Node.Text == "High Elf")
             {
                 txtRaceDetails.Text = highElfTraits;
-
+                
                 highElfCantrip();
-
+                
                 ExtraLanguages();
             }
-            else if (e.Node.Text == "Wood Elf")
+
+            if (e.Node.Text == "Wood Elf")
             {
+                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = woodElfTraits;
             }
-            else if (e.Node.Text == "Dark Elf (Drow)")
+
+            if (e.Node.Text == "Dark Elf (Drow)")
             {
+                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = darkElfTraits;
             }
-            else if (e.Node.Text == "Gnome")
+
+            if (e.Node.Text == "Gnome")
             {
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\Gnome.wav");
                 player.Play();
 
+                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = gnomeTraits;
             }
-            else if (e.Node.Text == "Forest Gnome")
+
+            if (e.Node.Text == "Forest Gnome")
             {
+                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = forestGnomeTraits;
             }
-            else if (e.Node.Text == "Rock Gnome")
+
+            if (e.Node.Text == "Rock Gnome")
             {
+                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = rockGnomeTraits;
             }
-            else if (e.Node.Text == "Half-Elf")
+
+            if (e.Node.Text == "Half-Elf")
             {
                 txtRaceDetails.Text = halfElfTraits;
+
+                hideAllComboBoxes();
 
                 halfElfAbilityScoreIncrease();
 
@@ -647,39 +699,52 @@ Languages: You can speak, read, and write Common and Infernal.";
 
                 ExtraLanguages();
             }
-            else if (e.Node.Text == "Half-Orc")
+
+            if (e.Node.Text == "Half-Orc")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = halfOrcTraits;
             }
-            else if (e.Node.Text == "Halfling")
+
+            if (e.Node.Text == "Halfling")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = halflingTraits;
             }
-            else if (e.Node.Text == "Lightfoot Halfling")
+
+            if (e.Node.Text == "Lightfoot Halfling")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = lightfootHalflingTraits;
             }
-            else if (e.Node.Text == "Stout Halfling")
+
+            if (e.Node.Text == "Stout Halfling")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = stoutHalflingTraits;
             }
-            else if (e.Node.Text == "Human")
+
+            if (e.Node.Text == "Human")
             {
                 txtRaceDetails.Text = humanTraits;
 
+                hideAllComboBoxes();
+
                 ExtraLanguages();
             }
-            else if (e.Node.Text == "Tiefling")
+
+            if (e.Node.Text == "Tiefling")
             {
                 resetComboBox();
+                hideAllComboBoxes();
 
                 txtRaceDetails.Text = tieflingTraits;
             }
@@ -710,6 +775,25 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
                 cboRaceOption3.Items.Remove(cboRaceOption4.Text);
+        }
+        #endregion
+
+        #region button events
+        private void btnChooseRace_Click(object sender, EventArgs e)
+        {
+            if (trvRaces.SelectedNode.Text == "Dwarf" || trvRaces.SelectedNode.Text == "Elf" || trvRaces.SelectedNode.Text == "Gnome" || trvRaces.SelectedNode.Text == "Halfling")
+            {
+                MessageBox.Show("Please select a race or subrace to continue.");
+            }
+            
+            else if (txtRaceDetails.Text != "Please Choose a Race or Subrace")
+            {
+                tabCharacterCreator.SelectedIndex = 1;
+            }
+            else
+            {
+                MessageBox.Show("Please select a race or subrace to continue.");
+            }
         }
         #endregion
     }
