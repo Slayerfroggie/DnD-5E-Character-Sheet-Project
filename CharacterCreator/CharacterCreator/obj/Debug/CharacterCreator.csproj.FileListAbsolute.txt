@@ -8,4 +8,3 @@ D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\Characte
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.exe
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.pdb
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.frmCharacterCreator.resources
-D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.csprojAssemblyReference.cache

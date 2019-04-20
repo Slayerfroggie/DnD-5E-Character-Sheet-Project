@@ -20,6 +20,7 @@ namespace CharacterCreator
 
         private void frmCharacterCreator_Load(object sender, EventArgs e)
         {
+            // hides those ugly blank combo boxes when the form loads
             hideAllComboBoxes();
         }
         #endregion
@@ -27,12 +28,16 @@ namespace CharacterCreator
         #region General Methods
         public void resetComboBox()
         {
+            // supplementry to the hiding of combo boxes and prevents accidentally combining data
+
+            // clears text from the combo boxes
             cboRaceOption1.Text = "";
             cboRaceOption2.Text = "";
             cboRaceOption3.Text = "";
             cboRaceOption4.Text = "";
             cboRaceOption5.Text = "";
 
+            // clearing the combox collections
             cboRaceOption1.Items.Clear();
             cboRaceOption2.Items.Clear();
             cboRaceOption3.Items.Clear();
@@ -42,6 +47,7 @@ namespace CharacterCreator
 
         public void hideAllComboBoxes()
         {
+            // hides the combo boxes
             cboRaceOption1.Hide();
             cboRaceOption2.Hide();
             cboRaceOption3.Hide();
@@ -51,6 +57,8 @@ namespace CharacterCreator
         #endregion
 
         #region Racial Descriptions
+
+        // provides all text for the racial tab easier to hard code rather than storing a txt or db
 
         #region Dragonborn   
         string dragonbornTraits = "Dragonborn Traits\r\n\r\nYour Draconic heritage manifests in a variety of traits you share with other dragonborn.\r\n\r\nAbility Score Increase: Your Strength score increases by 2, and your Charisma score increases by 1.\r\n\r\nAge: Young dragonborn grow quickly.They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach Adulthood by 15. They live to be around 80.\r\n\r\nAlignment: Dragonborn tend to extremes, making a conscious choice for one side or the other in the cosmic war between good and evil.Most dragonborn are good, but those who side with evil can be terrible villains.\r\n\r\nSize: Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds.Your size is Medium.\r\n\r\nSpeed: Your base walking speed is 30 feet.\r\n\r\nDraconic Ancestry\r\n\r\nDragon Damage Type Breath Weapon\r\nBlack   Acid    5 by 30 ft.line (Dex.save)\r\nBlue    Lightning   5 by 30 ft.line (Dex.save)\r\nBrass   Fire    5 by 30 ft.line (Dex.save)\r\nBronze  Lightning   5 by 30 ft.line (Dex.save)\r\nCopper  Acid    5 by 30 ft.line (Dex.save)\r\nGold    Fire    15 ft.cone (Dex.save)\r\nGreen   Poison  15 ft.cone (Con.save)\r\nRed Fire    15 ft.cone (Dex.save)\r\nSilver  Cold    15 ft.cone (Con.save)\r\nWhite   Cold    15 ft.cone (Con.save)\r\n\r\nDraconic Ancestry: You have Draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage Resistance are determined by the dragon type, as shown in the table.\r\n\r\nBreath Weapon: You can use your action to exhale destructive energy.Your Draconic ancestry determines the size, shape, and damage type of the exhalation.\r\nWhen you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your Draconic ancestry.The DC for this saving throw equals 8 + your Constitution modifier + your Proficiency Bonus.A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.\r\nAfter you use your breath weapon, you can’t use it again until you complete a short or Long Rest.\r\n\r\nDamage Resistance: You have Resistance to the damage type associated with your Draconic ancestry.\r\n\r\nLanguages: You can speak, read, and write Common and Draconic.Draconic is thought to be one of the oldest Languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.";
@@ -394,6 +402,7 @@ Languages: You can speak, read, and write Common and Infernal.";
         #region Racial Items
         public void DragonbornAncestry()
         {
+            // racial items for the dragonborn race
             resetComboBox();
 
             cboRaceOption1.Show();
@@ -411,6 +420,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void DwarvenTools()
         {
+            // adds artisan tools to the dwarf subraces
             resetComboBox();
 
             cboRaceOption1.Show();
@@ -423,6 +433,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void highElfCantrip()
         {
+            // racial items for the high elf subrace
             resetComboBox();
 
             cboRaceOption1.Show();
@@ -448,6 +459,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void ExtraLanguages()
         {
+            //extra languages separated into different statements to make sense in terms of presentation when it comes to different races
             if (txtRaceDetails.Text == highElfTraits)
             {
                 cboRaceOption2.Show();
@@ -514,6 +526,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void halfElfAbilityScoreIncrease()
         {
+            // adds combo boxes for the half elf that showcase the 2 ability scores to be selected
             resetComboBox();
 
             cboRaceOption1.Show();
@@ -538,6 +551,7 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         public void halfElfSkillProfiency()
         {
+            // the same as the ability score option for half elf, just with skills
             cboRaceOption3.Show();
             cboRaceOption3.Text = "Skill 1";
 
@@ -588,16 +602,18 @@ Languages: You can speak, read, and write Common and Infernal.";
         #region Tree View Node Mouse Click Event
         private void trvRaces_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            // when nodes are clicked they trigger racial specfic methods from above
+
             //textBox1.Text = e.Node.Text;
 
             if (e.Node.Text == "Dragonborn")
             {
                 txtRaceDetails.Text = dragonbornTraits;
-                
+
                 hideAllComboBoxes();
 
                 DragonbornAncestry();
-                
+
                 cboRaceOption1.Text = "Ancestry Type";
             }
 
@@ -614,7 +630,7 @@ Languages: You can speak, read, and write Common and Infernal.";
                 txtRaceDetails.Text = hillDwarfTraits;
 
                 hideAllComboBoxes();
-                
+
                 DwarvenTools();
             }
 
@@ -623,7 +639,7 @@ Languages: You can speak, read, and write Common and Infernal.";
                 txtRaceDetails.Text = mountainDwarfTraits;
 
                 hideAllComboBoxes();
-                
+
                 DwarvenTools();
             }
 
@@ -638,9 +654,9 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "High Elf")
             {
                 txtRaceDetails.Text = highElfTraits;
-                
+
                 highElfCantrip();
-                
+
                 ExtraLanguages();
             }
 
@@ -753,16 +769,21 @@ Languages: You can speak, read, and write Common and Infernal.";
         #endregion
 
         #region Half-Elf ComboBox Trait changes
+
+        // the half elf combo boxes needed some logic to remove already selected items in the connected combo box
         private void cboRaceOption1_TextChanged(object sender, EventArgs e)
         {
+            // will only happen when the half elf method is in effect due to the wide use of the combo boxes
+            
+
             if(trvRaces.SelectedNode.Text == "Half-Elf")
-            cboRaceOption2.Items.Remove(cboRaceOption1.Text);
+                cboRaceOption2.Items.Remove(cboRaceOption1.Text);
         }
 
         private void cboRaceOption2_TextChanged(object sender, EventArgs e)
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
-                cboRaceOption2.Items.Remove(cboRaceOption1.Text);
+                cboRaceOption1.Items.Remove(cboRaceOption2.Text);
         }
 
         private void cboRaceOption3_TextChanged(object sender, EventArgs e)
@@ -783,9 +804,9 @@ Languages: You can speak, read, and write Common and Infernal.";
         {
             if (trvRaces.SelectedNode.Text == "Dwarf" || trvRaces.SelectedNode.Text == "Elf" || trvRaces.SelectedNode.Text == "Gnome" || trvRaces.SelectedNode.Text == "Halfling")
             {
+                // won't move to the class tab unless a valid race is selected
                 MessageBox.Show("Please select a race or subrace to continue.");
             }
-            
             else if (txtRaceDetails.Text != "Please Choose a Race or Subrace")
             {
                 tabCharacterCreator.SelectedIndex = 1;
