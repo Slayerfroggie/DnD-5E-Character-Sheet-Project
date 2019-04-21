@@ -20,12 +20,27 @@ namespace CharacterCreator
 
         private void frmCharacterCreator_Load(object sender, EventArgs e)
         {
+            // disables all other tabs but the starting racial tab
+            disableTabs();
+
             // hides those ugly blank combo boxes when the form loads
             hideAllComboBoxes();
+
+            trvRaces.ExpandAll();
         }
         #endregion
 
         #region General Methods
+
+        public void disableTabs()
+        {
+            foreach (TabPage tab in tabCharacterCreator.TabPages)
+            {
+                tab.Enabled = false;
+            }
+            (tabCharacterCreator.TabPages[0] as TabPage).Enabled = true;
+        }
+
         public void resetComboBox()
         {
             // supplementry to the hiding of combo boxes and prevents accidentally combining data
@@ -524,7 +539,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             }
         }
 
-        public void halfElfAbilityScoreIncrease()
+        public void halfElfAbilityScoreIncrease1()
         {
             // adds combo boxes for the half elf that showcase the 2 ability scores to be selected
             resetComboBox();
@@ -537,7 +552,10 @@ Languages: You can speak, read, and write Common and Infernal.";
             cboRaceOption1.Items.Add("Intelligence");
             cboRaceOption1.Items.Add("Strength");
             cboRaceOption1.Items.Add("Wisdom");
+        }
 
+        public void halfElfAbilityScoreIncrease2()
+        {
             cboRaceOption2.Show();
             cboRaceOption2.Text = "Ability 2";
 
@@ -546,7 +564,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             cboRaceOption2.Items.Add("Intelligence");
             cboRaceOption2.Items.Add("Strength");
             cboRaceOption2.Items.Add("Wisdom");
-
         }
 
         public void halfElfSkillProfiency()
@@ -709,7 +726,8 @@ Languages: You can speak, read, and write Common and Infernal.";
 
                 hideAllComboBoxes();
 
-                halfElfAbilityScoreIncrease();
+                halfElfAbilityScoreIncrease1();
+                halfElfAbilityScoreIncrease2();
 
                 halfElfSkillProfiency();
 
@@ -771,12 +789,17 @@ Languages: You can speak, read, and write Common and Infernal.";
         #region Half-Elf ComboBox Trait changes
 
         // the half elf combo boxes needed some logic to remove already selected items in the connected combo box
+
+        // these methods do contain a bug but shouldn't be a big issue
+        // this bug being that the user could potentially remove half of each cbo list if they select too many different lists
+        // this is under the assumtion that the user won't select several option in one sitting and they may change the race
+        // before it becomes a glaring issue
+
+        // a future fix maybe be found but due to the minor impact of the bug, and the fact i've dedicated quite some time to try and fix this already
+
         private void cboRaceOption1_TextChanged(object sender, EventArgs e)
         {
-            // will only happen when the half elf method is in effect due to the wide use of the combo boxes
-            
-
-            if(trvRaces.SelectedNode.Text == "Half-Elf")
+            if (trvRaces.SelectedNode.Text == "Half-Elf")
                 cboRaceOption2.Items.Remove(cboRaceOption1.Text);
         }
 
@@ -809,13 +832,39 @@ Languages: You can speak, read, and write Common and Infernal.";
             }
             else if (txtRaceDetails.Text != "Please Choose a Race or Subrace")
             {
-                tabCharacterCreator.SelectedIndex = 1;
+                currentIndex += 1;
+
+                if (currentIndex >= tabCharacterCreator.TabPages.Count)
+                {
+                    currentIndex = 0;
+                }
+
+                foreach (TabPage pg in tabCharacterCreator.TabPages)
+                {
+                    pg.Enabled = false;
+                }
+
+                tabCharacterCreator.TabPages[currentIndex].Enabled = true;
+                tabCharacterCreator.SelectedIndex = currentIndex;
             }
             else
             {
                 MessageBox.Show("Please select a race or subrace to continue.");
             }
+
+
         }
+        #endregion
+
+        #region TabControl Events
+        int currentIndex = 0; //global initial setting
+
+        private void tabCharacterCreator_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tabCharacterCreator.SelectedIndex = currentIndex;
+            return;
+        }
+
         #endregion
     }
 }

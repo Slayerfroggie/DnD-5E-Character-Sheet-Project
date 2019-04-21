@@ -57,7 +57,7 @@
             System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Tiefling");
             this.tabCharacterCreator = new System.Windows.Forms.TabControl();
             this.tpgRace = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlpRacialFunctions = new System.Windows.Forms.TableLayoutPanel();
             this.cboRaceOption3 = new System.Windows.Forms.ComboBox();
             this.cboRaceOption5 = new System.Windows.Forms.ComboBox();
             this.cboRaceOption4 = new System.Windows.Forms.ComboBox();
@@ -72,7 +72,7 @@
             this.tpgEquipment = new System.Windows.Forms.TabPage();
             this.tabCharacterCreator.SuspendLayout();
             this.tpgRace.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpRacialFunctions.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabCharacterCreator
@@ -83,54 +83,56 @@
             this.tabCharacterCreator.Controls.Add(this.tpgDescription);
             this.tabCharacterCreator.Controls.Add(this.tpgEquipment);
             this.tabCharacterCreator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabCharacterCreator.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCharacterCreator.Location = new System.Drawing.Point(0, 0);
             this.tabCharacterCreator.Name = "tabCharacterCreator";
             this.tabCharacterCreator.SelectedIndex = 0;
-            this.tabCharacterCreator.Size = new System.Drawing.Size(914, 601);
+            this.tabCharacterCreator.Size = new System.Drawing.Size(1078, 642);
             this.tabCharacterCreator.TabIndex = 0;
             this.tabCharacterCreator.TabStop = false;
+            this.tabCharacterCreator.SelectedIndexChanged += new System.EventHandler(this.tabCharacterCreator_SelectedIndexChanged);
             // 
             // tpgRace
             // 
-            this.tpgRace.Controls.Add(this.tableLayoutPanel1);
+            this.tpgRace.Controls.Add(this.tlpRacialFunctions);
             this.tpgRace.Controls.Add(this.txtRaceDetails);
             this.tpgRace.Controls.Add(this.trvRaces);
-            this.tpgRace.Location = new System.Drawing.Point(4, 22);
+            this.tpgRace.Location = new System.Drawing.Point(4, 34);
             this.tpgRace.Name = "tpgRace";
             this.tpgRace.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgRace.Size = new System.Drawing.Size(906, 575);
+            this.tpgRace.Size = new System.Drawing.Size(1070, 604);
             this.tpgRace.TabIndex = 0;
             this.tpgRace.Text = "1. Race";
             this.tpgRace.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // tlpRacialFunctions
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.cboRaceOption3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cboRaceOption5, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cboRaceOption4, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cboRaceOption2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cboRaceOption1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnChooseRace, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(350, 492);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(548, 75);
-            this.tableLayoutPanel1.TabIndex = 8;
+            this.tlpRacialFunctions.ColumnCount = 3;
+            this.tlpRacialFunctions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpRacialFunctions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpRacialFunctions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpRacialFunctions.Controls.Add(this.cboRaceOption3, 1, 0);
+            this.tlpRacialFunctions.Controls.Add(this.cboRaceOption5, 2, 0);
+            this.tlpRacialFunctions.Controls.Add(this.cboRaceOption4, 1, 1);
+            this.tlpRacialFunctions.Controls.Add(this.cboRaceOption2, 0, 1);
+            this.tlpRacialFunctions.Controls.Add(this.cboRaceOption1, 0, 0);
+            this.tlpRacialFunctions.Controls.Add(this.btnChooseRace, 2, 1);
+            this.tlpRacialFunctions.Location = new System.Drawing.Point(351, 521);
+            this.tlpRacialFunctions.Name = "tlpRacialFunctions";
+            this.tlpRacialFunctions.RowCount = 2;
+            this.tlpRacialFunctions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpRacialFunctions.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpRacialFunctions.Size = new System.Drawing.Size(711, 75);
+            this.tlpRacialFunctions.TabIndex = 8;
             // 
             // cboRaceOption3
             // 
             this.cboRaceOption3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboRaceOption3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRaceOption3.FormattingEnabled = true;
-            this.cboRaceOption3.Location = new System.Drawing.Point(185, 3);
+            this.cboRaceOption3.Location = new System.Drawing.Point(240, 3);
             this.cboRaceOption3.Name = "cboRaceOption3";
-            this.cboRaceOption3.Size = new System.Drawing.Size(176, 33);
+            this.cboRaceOption3.Size = new System.Drawing.Size(231, 33);
             this.cboRaceOption3.TabIndex = 5;
             this.cboRaceOption3.TextChanged += new System.EventHandler(this.cboRaceOption3_TextChanged);
             // 
@@ -139,9 +141,9 @@
             this.cboRaceOption5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboRaceOption5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRaceOption5.FormattingEnabled = true;
-            this.cboRaceOption5.Location = new System.Drawing.Point(367, 3);
+            this.cboRaceOption5.Location = new System.Drawing.Point(477, 3);
             this.cboRaceOption5.Name = "cboRaceOption5";
-            this.cboRaceOption5.Size = new System.Drawing.Size(178, 33);
+            this.cboRaceOption5.Size = new System.Drawing.Size(231, 33);
             this.cboRaceOption5.TabIndex = 3;
             // 
             // cboRaceOption4
@@ -149,9 +151,9 @@
             this.cboRaceOption4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cboRaceOption4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRaceOption4.FormattingEnabled = true;
-            this.cboRaceOption4.Location = new System.Drawing.Point(185, 40);
+            this.cboRaceOption4.Location = new System.Drawing.Point(240, 40);
             this.cboRaceOption4.Name = "cboRaceOption4";
-            this.cboRaceOption4.Size = new System.Drawing.Size(176, 33);
+            this.cboRaceOption4.Size = new System.Drawing.Size(231, 33);
             this.cboRaceOption4.TabIndex = 6;
             this.cboRaceOption4.TextChanged += new System.EventHandler(this.cboRaceOption4_TextChanged);
             // 
@@ -162,7 +164,7 @@
             this.cboRaceOption2.FormattingEnabled = true;
             this.cboRaceOption2.Location = new System.Drawing.Point(3, 40);
             this.cboRaceOption2.Name = "cboRaceOption2";
-            this.cboRaceOption2.Size = new System.Drawing.Size(176, 33);
+            this.cboRaceOption2.Size = new System.Drawing.Size(231, 33);
             this.cboRaceOption2.TabIndex = 7;
             this.cboRaceOption2.TextChanged += new System.EventHandler(this.cboRaceOption2_TextChanged);
             // 
@@ -173,7 +175,7 @@
             this.cboRaceOption1.FormattingEnabled = true;
             this.cboRaceOption1.Location = new System.Drawing.Point(3, 3);
             this.cboRaceOption1.Name = "cboRaceOption1";
-            this.cboRaceOption1.Size = new System.Drawing.Size(176, 33);
+            this.cboRaceOption1.Size = new System.Drawing.Size(231, 33);
             this.cboRaceOption1.TabIndex = 4;
             this.cboRaceOption1.TextChanged += new System.EventHandler(this.cboRaceOption1_TextChanged);
             // 
@@ -181,9 +183,9 @@
             // 
             this.btnChooseRace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnChooseRace.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseRace.Location = new System.Drawing.Point(367, 40);
+            this.btnChooseRace.Location = new System.Drawing.Point(477, 40);
             this.btnChooseRace.Name = "btnChooseRace";
-            this.btnChooseRace.Size = new System.Drawing.Size(178, 32);
+            this.btnChooseRace.Size = new System.Drawing.Size(231, 32);
             this.btnChooseRace.TabIndex = 2;
             this.btnChooseRace.Text = "Choose Race";
             this.btnChooseRace.UseVisualStyleBackColor = true;
@@ -196,7 +198,7 @@
             this.txtRaceDetails.Multiline = true;
             this.txtRaceDetails.Name = "txtRaceDetails";
             this.txtRaceDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtRaceDetails.Size = new System.Drawing.Size(548, 483);
+            this.txtRaceDetails.Size = new System.Drawing.Size(712, 509);
             this.txtRaceDetails.TabIndex = 1;
             this.txtRaceDetails.Text = "Please Choose a Race or Subrace";
             // 
@@ -212,6 +214,7 @@
             treeNode2.Text = "Hill Dwarf";
             treeNode3.Name = "nodDwarfMountain";
             treeNode3.Text = "Mountain Dwarf";
+            treeNode4.Checked = true;
             treeNode4.Name = "nodDwarf";
             treeNode4.Text = "Dwarf";
             treeNode5.Name = "nodElfHigh";
@@ -252,7 +255,7 @@
             treeNode16,
             treeNode17,
             treeNode18});
-            this.trvRaces.Size = new System.Drawing.Size(337, 561);
+            this.trvRaces.Size = new System.Drawing.Size(337, 590);
             this.trvRaces.TabIndex = 0;
             this.trvRaces.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvRaces_NodeMouseClick);
             // 
@@ -297,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 601);
+            this.ClientSize = new System.Drawing.Size(1078, 642);
             this.Controls.Add(this.tabCharacterCreator);
             this.MaximizeBox = false;
             this.Name = "frmCharacterCreator";
@@ -306,7 +309,7 @@
             this.tabCharacterCreator.ResumeLayout(false);
             this.tpgRace.ResumeLayout(false);
             this.tpgRace.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlpRacialFunctions.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -322,7 +325,7 @@
         private System.Windows.Forms.TabPage tpgEquipment;
         private System.Windows.Forms.Button btnChooseRace;
         private System.Windows.Forms.TextBox txtRaceDetails;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlpRacialFunctions;
         private System.Windows.Forms.ComboBox cboRaceOption3;
         private System.Windows.Forms.ComboBox cboRaceOption5;
         private System.Windows.Forms.ComboBox cboRaceOption4;
