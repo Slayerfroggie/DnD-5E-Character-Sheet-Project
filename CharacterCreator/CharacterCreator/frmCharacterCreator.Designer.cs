@@ -255,43 +255,45 @@
             treeNode16,
             treeNode17,
             treeNode18});
+            this.trvRaces.ShowPlusMinus = false;
+            this.trvRaces.ShowRootLines = false;
             this.trvRaces.Size = new System.Drawing.Size(337, 590);
             this.trvRaces.TabIndex = 0;
             this.trvRaces.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.trvRaces_NodeMouseClick);
             // 
             // tpgClass
             // 
-            this.tpgClass.Location = new System.Drawing.Point(4, 22);
+            this.tpgClass.Location = new System.Drawing.Point(4, 34);
             this.tpgClass.Name = "tpgClass";
             this.tpgClass.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgClass.Size = new System.Drawing.Size(906, 575);
+            this.tpgClass.Size = new System.Drawing.Size(1070, 604);
             this.tpgClass.TabIndex = 1;
             this.tpgClass.Text = "2. Class";
             this.tpgClass.UseVisualStyleBackColor = true;
             // 
             // tpgAbilities
             // 
-            this.tpgAbilities.Location = new System.Drawing.Point(4, 22);
+            this.tpgAbilities.Location = new System.Drawing.Point(4, 34);
             this.tpgAbilities.Name = "tpgAbilities";
-            this.tpgAbilities.Size = new System.Drawing.Size(906, 575);
+            this.tpgAbilities.Size = new System.Drawing.Size(1070, 604);
             this.tpgAbilities.TabIndex = 2;
             this.tpgAbilities.Text = "3. Abilities";
             this.tpgAbilities.UseVisualStyleBackColor = true;
             // 
             // tpgDescription
             // 
-            this.tpgDescription.Location = new System.Drawing.Point(4, 22);
+            this.tpgDescription.Location = new System.Drawing.Point(4, 34);
             this.tpgDescription.Name = "tpgDescription";
-            this.tpgDescription.Size = new System.Drawing.Size(906, 575);
+            this.tpgDescription.Size = new System.Drawing.Size(1070, 604);
             this.tpgDescription.TabIndex = 3;
             this.tpgDescription.Text = "4. Description";
             this.tpgDescription.UseVisualStyleBackColor = true;
             // 
             // tpgEquipment
             // 
-            this.tpgEquipment.Location = new System.Drawing.Point(4, 22);
+            this.tpgEquipment.Location = new System.Drawing.Point(4, 34);
             this.tpgEquipment.Name = "tpgEquipment";
-            this.tpgEquipment.Size = new System.Drawing.Size(906, 575);
+            this.tpgEquipment.Size = new System.Drawing.Size(1070, 604);
             this.tpgEquipment.TabIndex = 4;
             this.tpgEquipment.Text = "5.Equipment";
             this.tpgEquipment.UseVisualStyleBackColor = true;

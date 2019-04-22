@@ -69,6 +69,7 @@ namespace CharacterCreator
             cboRaceOption4.Hide();
             cboRaceOption5.Hide();
         }
+
         #endregion
 
         #region Racial Descriptions
@@ -623,11 +624,11 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             //textBox1.Text = e.Node.Text;
 
+            hideAllComboBoxes();
+
             if (e.Node.Text == "Dragonborn")
             {
                 txtRaceDetails.Text = dragonbornTraits;
-
-                hideAllComboBoxes();
 
                 DragonbornAncestry();
 
@@ -639,14 +640,11 @@ Languages: You can speak, read, and write Common and Infernal.";
                 txtRaceDetails.Text = dwarfTraits;
 
                 resetComboBox();
-                hideAllComboBoxes();
             }
 
             if (e.Node.Text == "Hill Dwarf")
             {
                 txtRaceDetails.Text = hillDwarfTraits;
-
-                hideAllComboBoxes();
 
                 DwarvenTools();
             }
@@ -655,15 +653,12 @@ Languages: You can speak, read, and write Common and Infernal.";
             {
                 txtRaceDetails.Text = mountainDwarfTraits;
 
-                hideAllComboBoxes();
-
                 DwarvenTools();
             }
 
             if (e.Node.Text == "Elf")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = elfTraits;
             }
@@ -679,7 +674,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Wood Elf")
             {
-                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = woodElfTraits;
@@ -687,7 +681,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Dark Elf (Drow)")
             {
-                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = darkElfTraits;
@@ -697,8 +690,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             {
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\Gnome.wav");
                 player.Play();
-
-                hideAllComboBoxes();
+                
                 resetComboBox();
 
                 txtRaceDetails.Text = gnomeTraits;
@@ -706,7 +698,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Forest Gnome")
             {
-                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = forestGnomeTraits;
@@ -714,7 +705,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Rock Gnome")
             {
-                hideAllComboBoxes();
                 resetComboBox();
 
                 txtRaceDetails.Text = rockGnomeTraits;
@@ -723,8 +713,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Half-Elf")
             {
                 txtRaceDetails.Text = halfElfTraits;
-
-                hideAllComboBoxes();
 
                 halfElfAbilityScoreIncrease1();
                 halfElfAbilityScoreIncrease2();
@@ -737,7 +725,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Half-Orc")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = halfOrcTraits;
             }
@@ -745,7 +732,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Halfling")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = halflingTraits;
             }
@@ -753,7 +739,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Lightfoot Halfling")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = lightfootHalflingTraits;
             }
@@ -761,7 +746,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Stout Halfling")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = stoutHalflingTraits;
             }
@@ -770,15 +754,12 @@ Languages: You can speak, read, and write Common and Infernal.";
             {
                 txtRaceDetails.Text = humanTraits;
 
-                hideAllComboBoxes();
-
                 ExtraLanguages();
             }
 
             if (e.Node.Text == "Tiefling")
             {
                 resetComboBox();
-                hideAllComboBoxes();
 
                 txtRaceDetails.Text = tieflingTraits;
             }
@@ -790,35 +771,61 @@ Languages: You can speak, read, and write Common and Infernal.";
 
         // the half elf combo boxes needed some logic to remove already selected items in the connected combo box
 
-        // these methods do contain a bug but shouldn't be a big issue
-        // this bug being that the user could potentially remove half of each cbo list if they select too many different lists
-        // this is under the assumtion that the user won't select several option in one sitting and they may change the race
-        // before it becomes a glaring issue
-
-        // a future fix maybe be found but due to the minor impact of the bug, and the fact i've dedicated quite some time to try and fix this already
-
+        string Ability1 = "";
+        string Ability2 = "";
+        string Profiency1 = "";
+        string Profiency2 = "";
+        
         private void cboRaceOption1_TextChanged(object sender, EventArgs e)
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
-                cboRaceOption2.Items.Remove(cboRaceOption1.Text);
+            {
+                Ability1 = cboRaceOption1.Text;
+                cboRaceOption2.Items.Remove(cboRaceOption1.SelectedItem);
+                if (cboRaceOption2.Text != "Ability 2")
+                {
+                    cboRaceOption1.Items.Add(Ability2);
+                }
+            }
         }
 
         private void cboRaceOption2_TextChanged(object sender, EventArgs e)
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
-                cboRaceOption1.Items.Remove(cboRaceOption2.Text);
+            {
+                Ability2 = cboRaceOption2.Text;
+                cboRaceOption1.Items.Remove(cboRaceOption2.SelectedItem);
+                if (cboRaceOption1.Text != "Ability 1")
+                {
+                    cboRaceOption2.Items.Add(Ability1);
+                }
+            }
         }
 
         private void cboRaceOption3_TextChanged(object sender, EventArgs e)
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
-                cboRaceOption4.Items.Remove(cboRaceOption3.Text);
+            {
+                Profiency2 = cboRaceOption3.Text;
+                cboRaceOption4.Items.Remove(cboRaceOption3.SelectedItem);
+                if (cboRaceOption4.Text != "Skill 2")
+                {
+                    cboRaceOption3.Items.Add(Profiency2);
+                }
+            }
         }
 
         private void cboRaceOption4_TextChanged(object sender, EventArgs e)
         {
             if (trvRaces.SelectedNode.Text == "Half-Elf")
-                cboRaceOption3.Items.Remove(cboRaceOption4.Text);
+            {
+                Profiency1 = cboRaceOption4.Text;
+                cboRaceOption3.Items.Remove(cboRaceOption4.SelectedItem);
+                if (cboRaceOption3.Text != "Skill 1")
+                {
+                    cboRaceOption4.Items.Add(Profiency1);
+                }
+            }
         }
         #endregion
 
