@@ -9,3 +9,14 @@ D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\Characte
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.pdb
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.frmCharacterCreator.resources
 D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.csprojAssemblyReference.cache
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\bin\Debug\CharacterCreator.exe.config
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\bin\Debug\CharacterCreator.exe
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\bin\Debug\CharacterCreator.pdb
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.csprojAssemblyReference.cache
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.frmCharacterCreator.resources
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.frmCharacterStats.resources
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.Properties.Resources.resources
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.csproj.GenerateResource.cache
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.csproj.CoreCompileInputs.cache
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.exe
+C:\Franciscus\Game_Stuff\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\obj\Debug\CharacterCreator.pdb
