@@ -625,6 +625,7 @@ Languages: You can speak, read, and write Common and Infernal.";
             //textBox1.Text = e.Node.Text;
 
             hideAllComboBoxes();
+			resetComboBox();
 
             if (e.Node.Text == "Dragonborn")
             {
@@ -638,8 +639,6 @@ Languages: You can speak, read, and write Common and Infernal.";
             if (e.Node.Text == "Dwarf")
             {
                 txtRaceDetails.Text = dwarfTraits;
-
-                resetComboBox();
             }
 
             if (e.Node.Text == "Hill Dwarf")
@@ -658,8 +657,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Elf")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = elfTraits;
             }
 
@@ -674,15 +671,11 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Wood Elf")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = woodElfTraits;
             }
 
             if (e.Node.Text == "Dark Elf (Drow)")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = darkElfTraits;
             }
 
@@ -693,22 +686,16 @@ Languages: You can speak, read, and write Common and Infernal.";
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer(GnomeSoundDir + @"\Gnome.wav");
                 player.Play();
                 
-                resetComboBox();
-
                 txtRaceDetails.Text = gnomeTraits;
             }
 
             if (e.Node.Text == "Forest Gnome")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = forestGnomeTraits;
             }
 
             if (e.Node.Text == "Rock Gnome")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = rockGnomeTraits;
             }
 
@@ -726,29 +713,21 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Half-Orc")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = halfOrcTraits;
             }
 
             if (e.Node.Text == "Halfling")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = halflingTraits;
             }
 
             if (e.Node.Text == "Lightfoot Halfling")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = lightfootHalflingTraits;
             }
 
             if (e.Node.Text == "Stout Halfling")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = stoutHalflingTraits;
             }
 
@@ -761,8 +740,6 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Tiefling")
             {
-                resetComboBox();
-
                 txtRaceDetails.Text = tieflingTraits;
             }
 
