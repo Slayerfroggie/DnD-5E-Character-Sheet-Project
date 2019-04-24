@@ -688,7 +688,9 @@ Languages: You can speak, read, and write Common and Infernal.";
 
             if (e.Node.Text == "Gnome")
             {
-                System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"D:\Microsoft Visual Studio\Side projects\DnD-5E-Character-Sheet-Project\CharacterCreator\CharacterCreator\Gnome.wav");
+				string GnomeSoundDir = System.IO.Directory.GetCurrentDirectory();
+
+                System.Media.SoundPlayer player = new System.Media.SoundPlayer(GnomeSoundDir + @"\Gnome.wav");
                 player.Play();
                 
                 resetComboBox();
